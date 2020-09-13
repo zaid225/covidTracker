@@ -1,0 +1,10 @@
+<!--<p>show-map works!</p>-->
+<div class="loader" *ngIf="isLoading"></div>
+<div [chart]="mapChart " *ngIf="!isLoading" ></div>
+<div id="globalStats" *ngIf="!isLoading">
+  <h3>Gloabal Statics</h3>
+<b>Total Case</b> :{{totalCase}} <br/>
+<b>Total Death</b> :<span style="color:red;">{{totalDeath}}</span> <br/>
+<b>Confirm</b>:{{totalConfirm}} <br/>
+<b>Positive Rate:</b><span style="color: red;">{{totalPositiveRate}}</span>
+</div>

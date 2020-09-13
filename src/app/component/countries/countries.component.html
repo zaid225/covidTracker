@@ -1,0 +1,22 @@
+<!--<p>countries works!</p>-->
+<div class="jumbotron text-center bg-white">
+    <h1 class="display-4">Corona Covid-19 Tracker Country Wise</h1>
+    <div class="row justify-content-center" >
+      <div class="col-md-10">
+        <div class="form-group-col-lg-5-mx-auto">
+      
+      <label for="c">Select Country</label>
+      <select id="c" class="form-control " style="text-align: center;" #input (change)="updateValues(input.value)" >
+        <option value="{{con}}" *ngFor="let con of countries">{{con}}</option>
+  </select>
+</div>
+       
+      </div>
+    </div><br>
+    <app-dasboard [toralDeath_per]="toralDeath_per"  [totalConfirm]="totalConfirm" 
+    [totalCase]="totalCase" [totalDeaths]="totalDeath" [totalLife]="totalLife" [totalPositiveRate]="totalPositiveRate" [totalTest]="totalTest"
+    
+    ></app-dasboard>
+   
+  </div>
+ 

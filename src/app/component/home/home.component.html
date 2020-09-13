@@ -1,0 +1,70 @@
+<!--<p>home works!</p>-->
+<div class="jumbotron text-center bg-white">
+  <h2 class="display-4">Corona Covid-19 Tracker</h2>
+  <hr>
+  <app-dasboard [toralDeath_per]="toralDeath_per"  [totalConfirm]="totalConfirm"
+  [totalCase]="totalCase" [totalDeaths]="totalDeath" [totalLife]="totalLife" [totalPositiveRate]="totalPositiveRate" [totalTest]="totalTest"
+
+  ></app-dasboard>
+<hr>
+
+<div class="ui form">
+  <div class="inline fields">
+    <label for="fruit">Select Cases:</label>
+    <div class="row">
+    <div class="col">
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" value="c" #c (click)="updateChart(c)" name="caseType" checked="" tabindex="0" class="hidden">
+          <label for="c">Confirm</label>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" value="tc"  #tc (click)="updateChart(tc)"  name="caseType" tabindex="0" class="hidden">
+          <label for="tc">Total Cases</label>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" value="td" #td (click)="updateChart(td)"  name="caseType" tabindex="0" class="hidden">
+          <label for="td">Total Death</label>
+        </div>
+      </div>
+    </div>
+   <div class="col">
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" value="pr" #pr (click)="updateChart(pr)"  name="caseType" tabindex="0" class="hidden">
+        <label for="pr">Positive Rate</label>
+      </div>
+    </div>
+   </div>
+   <div class="col">
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" value="p" #p (click)="updateChart(p)"  name="caseType" tabindex="0" class="hidden">
+        <label for="p">Population</label>
+      </div>
+    </div>
+  
+   </div>
+   </div>
+  
+</div>
+</div>
+<div class="row">
+  <div class="col">
+    <google-chart [data]="columnChart"></google-chart>
+  </div>
+  <div class="col">
+    <google-chart [data]="pieChart"></google-chart>
+  </div>
+</div>
+
+<!--<google-chart  [data]="GeoChart"></google-chart>-->
+
